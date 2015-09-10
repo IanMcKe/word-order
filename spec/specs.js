@@ -20,6 +20,14 @@ describe('wordOrder', function() {
     });
 
     it('handles floating punctuation or extra spaces', function() {
-        expect(wordOrder('WORD  WORD ... word ... brah')).to.deep.equal({ "word": 3, "brah": 1 });
+        expect(wordOrder('WORD       WORD ... word ... brah')).to.deep.equal({ "word": 3, "brah": 1 });
+    });
+
+    it('sorts words based on how often they appear', function() {
+        expect(wordOrder('hey hey a a bear word word word')).to.deep.equal({ "word": 3, "hey": 2, "a": 2, "bear": 1 })
+    });
+
+    it('sorts', function() {
+        expect(wordOrder('bear bear bear hey hey hey hey')).to.eql({ "bear": 3, "hey": 4 });
     });
 });
