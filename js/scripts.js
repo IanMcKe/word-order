@@ -1,6 +1,6 @@
 var wordOrder = function(userString) {
     var wordCount = {};
-    //removes special characters and convert to lowercase
+    //removes special characters and convert to lowercase; trims white space at beginning and end of string
     userString = userString.trim().replace(/[^a-zA-Z" "]+/g, '').toLowerCase();
     //removes extra whitespace
     userString = userString.replace(/(\s+\s+)/g, ' ')
