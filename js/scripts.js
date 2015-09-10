@@ -36,15 +36,3 @@ $(document).ready(function() {
         event.preventDefault();
     });
 });
-
-//
-// wordCountSorted = Object.keys(wordCount).sort(function(a,b){return list[b] - list[a]});
-// return wordCountSorted;
-//
-// for (var = i; i < wordCountSorted.length; i++){
-//     newWordCount[wordCountSorted[i]] = wordCount[wordCountSorted[i]]; ;
-// }
-//
-// var list = {"you": 100, "me": 75, "foo": 116, "bar": 15};
-// keysSorted = Object.keys(list).sort(function(a,b){return list[a]-list[b]})
-// alert(keysSorted);     // bar,me,you,foo
